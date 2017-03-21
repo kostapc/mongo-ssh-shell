@@ -21,7 +21,7 @@ public class MongoTemplateEx extends MongoTemplate {
     private static final Log LOG = LogFactory.getLog(MongoTemplateEx.class);
 
     @Resource
-    MongoSshShell mongoSshShell;
+    private MongoSshShell mongoSshShell;
 
     public MongoTemplateEx(Mongo mongo, String databaseName) {
         super(mongo, databaseName);
