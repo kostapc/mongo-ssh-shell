@@ -47,4 +47,5 @@ public class MongoTemplateEx extends MongoTemplate {
             return null;
         }
     }
+
 }

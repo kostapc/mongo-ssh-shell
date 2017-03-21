@@ -55,11 +55,11 @@ public class MongoSshShell {
                 quotedParams[i] = null;
                 continue;
             }
-            if(params[i] instanceof String) {
-                quotedParams[i] = "\"" + params[i] + "\"";
+            if (params[i] instanceof Number) {
+                quotedParams[i] = params[i].toString();
                 continue;
             }
-            quotedParams[i] = params[i].toString();
+            quotedParams[i] = "\"" + params[i].toString() + "\"";
         }
         return String.format(
                 "mongo -u %s -p %s %s -eval 'db.loadServerScripts(); %s(%s);'",
